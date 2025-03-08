@@ -27,7 +27,7 @@ Before you can run this project, make sure you have the following installed:
     docker-compose build
     docker-compose up
 ```
-- API will be available at http://127.0.0.1:8000/
-- Swagger documentation will be available at http://127.0.0.1:8000/docs
+- API will be available at http://127.0.0.1:8001/
+- Swagger documentation will be available at http://127.0.0.1:8001/docs
 - Run tests: `docker-compose run app sh -c "pytest"`;
 - Run flake8: `docker-compose run app sh -c "flake8"`;
