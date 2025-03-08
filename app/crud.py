@@ -82,6 +82,12 @@ class VoteCRUD:
         if existing_vote:
             raise ValueError("Employee has already voted today")
 
+        menu = self.db.query(
+            models.Menu
+        ).filter(models.Menu.id == vote.menu_id).first()
+        if not menu:
+            raise ValueError("Menu not found")
+
         db_vote = models.Vote(
             employee_id=self.current_user.id,
             menu_id=vote.menu_id,
