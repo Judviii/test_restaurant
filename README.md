@@ -1,4 +1,4 @@
-# Library Service API
+# Restaurant Menu Voting API
 
 ## Introduction
 Performing a test task:
