@@ -32,5 +32,5 @@ Before you can run this project, make sure you have the following installed:
 - Run tests: `docker-compose run app sh -c "pytest"`;
 - Run flake8: `docker-compose run app sh -c "flake8"`;
 ## Notes on Implementation
-- The API supports multiple client app versions (1.0 and 2.0) via middleware that checks the `App-Version` header.
-- Currently, the logic is identical for all versions, but the structure allows for easy extension to add version-specific behavior if needed.
+- The API supports multiple client app versions (1.0 and 2.0) via middleware that checks the `App-Version` header. Currently, the logic is identical for all versions, but the structure allows for easy extension to add version-specific behavior if needed.
+- **Important Note**: After the time was up, I realized that I hadn't implemented separate access for restaurants to upload menus. If I had more time, I would have reworked the `Employee` (User) model by adding the roles `restaurant_employee` and `company_employee` or `admin`|`user`, where the first role would allow menu uploads and the second role would allow voting. I am not making these changes to comply with the rules, but I am willing to discuss this solution.
